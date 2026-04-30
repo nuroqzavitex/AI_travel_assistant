@@ -7,5 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "langgraph>=0.2.0",
     "python-dotenv>=1.2.2",
+    "serpapi>=1.0.2",
     "typing-extensions>=4.15.0",
 ]
