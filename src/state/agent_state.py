@@ -2,31 +2,12 @@ from typing import Annotated, Any
 from typing_extensions import TypedDict
 from langgraph.graph.message import add_messages
 
-class UserRequest(TypedDict, total=False):
-  origin: str | None
-  destination: str | None
-  departure_date: str | None
-  return_date: str | None
-  budget: float | None
-  currency: str
-  passengers: int
-  trip_type: str
-  hotel_needed: bool
-
 class AgentState(TypedDict, total=False):
   # Core
   messages: Annotated[list, add_messages]
   intent: str # ý định của user
   current_step: str
   error: str | None
-
-  # Pipeline
-  user_request: UserRequest
-  search_type: str
-  flight_results: list[dict[str, Any]]
-  hotel_results: list[dict[str, Any]]
-  ranked_deals: str
-  missing_fields: list[str] # danh sách các trường còn thiếu trong user_request để bot hỏi lại
 
   # Multi-Agent: Planner
   plan: dict # {"steps": [...], "constraints": {...}, "goal": "..."}
@@ -38,6 +19,8 @@ class AgentState(TypedDict, total=False):
   completed_agents: list[str] 
 
   # Multi-Agent: Agent results
+  flight_results: list[dict[str, Any]]
+  hotel_results: list[dict[str, Any]]
   weather_info: str
   search_info: str
 
