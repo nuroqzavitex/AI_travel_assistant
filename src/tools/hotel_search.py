@@ -5,7 +5,7 @@ import json
 
 @tool
 def search_hotels(destination: str, check_in_date: str, check_out_date: str) -> str:
-  # Dùng google search thông qua serpapi để tìm kiếm thông tin khách sạn
+  """Search hotels using Google Hotels via SerpAPI."""
   params = {
     'engine': 'google_hotels',
     'q': f'Khách sạn {destination}',

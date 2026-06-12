@@ -5,7 +5,7 @@ import json
 
 @tool
 def search_flights(departure_id: str, arrival_id: str, outbound_date: str) -> str:
-  # Dùng google search thông qua serpapi để tìm kiếm thông tin chuyến bay
+  """Search flights using Google Flights via SerpAPI."""
 
   # Tạo param cho serpapi
   params = {

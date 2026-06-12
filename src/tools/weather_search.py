@@ -5,7 +5,15 @@ import json
 
 @tool
 def get_weather(city: str) -> str:
-  # Dùng OpenWeatherMap API để lấy thông tin thời tiết hiện tại của một thành phố
+  """Get current weather for a city using OpenWeatherMap API.
+
+  Args:
+    city: City name (e.g. "Da Nang", "Ha Noi", "Nha Trang")
+
+  Returns:
+    JSON string with weather data including temperature, humidity,
+    description, wind speed, etc.
+    """
 
   if not OPENWEATHERMAP_API_KEY:
     return json.dumps({

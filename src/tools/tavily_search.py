@@ -4,8 +4,11 @@ from config.settings import TAVILY_API_KEY
 
 @tool
 def search_web(query: str) -> str:
-  # Tìm kiếm thông tin du lịch trên web thông qua Tavily
-  # Ví dụ: 'kinh nghiệm du lịch Đà Nẵng 3 ngày'
+  """Tìm kiếm thông tin du lịch trên web.
+
+  Args:
+    query: Câu hỏi cần tìm, ví dụ: "kinh nghiệm du lịch Đà Nẵng 3 ngày"
+  """
 
   if not TAVILY_API_KEY:
     return 'Lỗi: Chưa cấu hình TAVILY_API_KEY'
