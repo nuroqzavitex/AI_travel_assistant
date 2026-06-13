@@ -11,9 +11,6 @@ TEMPERATURE = float(os.getenv("TEMPERATURE", "0.3"))
 # ── SerpAPI ──────────────────────────────────────────
 SERPAPI_API_KEY = os.getenv("SERPAPI_API_KEY")
 
-# ── Makcorps (optional) ─────────────────────────────
-MAKCORPS_API_KEY = os.getenv("MAKCORPS_API_KEY")
-
 # ── OpenWeatherMap ──────────────────────────────────
 OPENWEATHERMAP_API_KEY = os.getenv("OPENWEATHERMAP_API_KEY")
 
