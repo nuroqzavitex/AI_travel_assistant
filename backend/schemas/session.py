@@ -11,3 +11,7 @@ class SessionMessage(BaseModel):
 
 class SessionDetail(BaseModel):
   messages: list[SessionMessage] = []
+
+class DeleteResponse(BaseModel):
+  """Response after deleting a session."""
+  status: str = 'deleted'
